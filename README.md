@@ -17,7 +17,7 @@ then just do the following to update the autoloader that is in the vendor folder
 
 composer dumpautoload -o
 
-Where Library (You can name this anything you wish) is the namespace and src (again you can name src anything you want, but just make sure it's in the root directory) is the actual directory where your classes will be located at.
+Where Library is the namespace and src is the actual directory where your classes will be located at. Library can be any namespace name that you want and so can src though the directory needs to be at the same level as your vendor folder is. In this case it's at the root directory and probably will be for 99.9 percent of your projects. 
 
 ```javascript
 namespace Library\Calendar;
