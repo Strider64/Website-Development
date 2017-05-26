@@ -1,5 +1,5 @@
 <?php
-require 'src/includes/config.php';
+require 'config/config.php';
 require "vendor/autoload.php";
 use Library\Calendar\Calendar;
 use Library\Database\Database as DB;
@@ -21,7 +21,7 @@ $myCalendar->phpDate();
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charset="UTF-8">
         <title>Images &amp; The Raspberry Pi</title>
-        <link rel="stylesheet" href="src/css/stylesheet.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
         <div id="header">
