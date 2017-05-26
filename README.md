@@ -28,3 +28,4 @@ abstract class Location {
 
 The above shows an example of one of my classes and yes I know the class doesn't correspond to the the folder named Calender in Library\Calendar namespace, but as long as the file is named Location.php representing the class Location and it is in the folder src/Calendar there should be no problem. I just wanted to show it this way, for it helped visualize how to do this better. 
 
+A better explantion on how to use an autoloader with namespaces can be found here : http://phpenthusiast.com/blog/how-to-autoload-with-composer
