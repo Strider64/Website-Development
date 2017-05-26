@@ -17,7 +17,7 @@ then just do the following to update the autoloader that is in the vendor folder
 
 composer dumpautoload -o
 
-Where Library (You can name this anything you wish) is the namespace and src/ (again you can name src anything you want, but just make sure it's in the root directory) is the actual directory where your classes will be located at.
+Where Library (You can name this anything you wish) is the namespace and src (again you can name src anything you want, but just make sure it's in the root directory) is the actual directory where your classes will be located at.
 
 namespace Library\Calendar;
 
