@@ -19,6 +19,7 @@ composer dumpautoload -o
 
 Where Library (You can name this anything you wish) is the namespace and src (again you can name src anything you want, but just make sure it's in the root directory) is the actual directory where your classes will be located at.
 
+```javascript
 namespace Library\Calendar;
 
 use Library\Database\Database as DB;
@@ -27,6 +28,7 @@ use DateTimeZone;
 use PDO;
 
 abstract class Location {
+```
 
 The above shows an example of one of my classes and yes I know the class doesn't correspond to the the folder named Calender in Library\Calendar namespace, but as long as the file is named Location.php representing the class Location and it is in the folder src/Calendar there should be no problem. I just wanted to show it this way, for it helped me visualize how to do this. 
 
