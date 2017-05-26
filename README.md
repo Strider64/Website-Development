@@ -3,6 +3,7 @@ I am currently redesigning my main website using composer's autoload feature for
 
 Just have a composer.json file in this format
 
+```javascript
 {
   "autoload": {
     "psr-4": {
@@ -10,6 +11,7 @@ Just have a composer.json file in this format
     }
   }
 } 
+```
 
 then just do the following to update the autoloader that is in the vendor folder at the command prompt:
 
