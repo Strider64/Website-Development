@@ -1,4 +1,4 @@
-# main_website
+# Website_Development
 I am currently redesigning my main website using composer's autoload feature for the classes that I develop. I was using an autoloader that I found on the internet, but doing it this way is cleaner and more standardize with Github.
 
 Just have a composer.json file in this format
