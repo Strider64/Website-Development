@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Raleway");
+/*  Color Theme*/
+/* Color Theme 2 */
+/* 
+    Created on : Feb 16, 2016, 8:22:58 AM
+    Author     : strider64
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, textarea, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  /* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+  *zoom: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.container:after {
+  clear: both; }
+
+.container:before,
+.container:after {
+  content: " ";
+  display: table; }
+
+.row {
+  /* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+  *zoom: 1; }
+
+.row:after {
+  clear: both; }
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+[class^="span"] {
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */ }
+
+[class^="span"]:first-child {
+  margin-left: 0; }
+
+.span1 {
+  width: 8.333333333333332%; }
+
+.span2 {
+  width: 16.666666666666664%; }
+
+.span3 {
+  width: 25%; }
+
+.span4 {
+  width: 33.33333333333333%; }
+
+.span5 {
+  width: 41.66666666666667%; }
+
+.span6 {
+  width: 50%; }
+
+.span7 {
+  width: 58.333333333333336%; }
+
+.span8 {
+  width: 66.66666666666666%; }
+
+.span9 {
+  width: 75%; }
+
+.span10 {
+  width: 83.33333333333334%; }
+
+.span11 {
+  width: 91.66666666666666%; }
+
+.span12 {
+  width: 100%; }
+
+[class^="m-span"] {
+  padding: 10px 0;
+  margin-left: 3.125%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */ }
+
+[class^="m-span"]:first-child {
+  margin-left: 0; }
+
+.m-span1 {
+  width: 5.46875%; }
+
+.m-span2 {
+  width: 14.0625%; }
+
+.m-span3 {
+  width: 22.65625%; }
+
+.m-span4 {
+  width: 31.25%; }
+
+.m-span5 {
+  width: 39.84375%; }
+
+.m-span6 {
+  width: 48.4375%; }
+
+.m-span7 {
+  width: 57.03125%; }
+
+.m-span8 {
+  width: 65.625%; }
+
+.m-span9 {
+  width: 74.21875%; }
+
+.m-span10 {
+  width: 82.8125%; }
+
+.m-span11 {
+  width: 91.40625%; }
+
+.m-span12 {
+  width: 100%; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*******************************************
+TYPOGRAPHY CSS STYLING
+********************************************/
+h1, h3, th {
+  font-family: 'Merriweather', serif; }
+
+p, td {
+  font-family: 'Raleway', sans-serif; }
+
+body {
+  background-color: #D9D9D9;
+  padding: 0;
+  margin: 0; }
+
+/* SMARTPHONE STYLING */
+@media only screen and (max-width: 480px) {
+  table {
+    float: none;
+    width: 100%;
+    position: relative;
+    border-collapse: collapse; }
+
+  table th {
+    border-bottom: 1px solid #CCCCCC; }
+
+  table th.tableHeading {
+    height: 50px;
+    background-color: #4484CE;
+    font-size: 1.2rem;
+    line-height: 50px;
+    color: #F9CF00; }
+
+  table th {
+    vertical-align: bottom;
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #F9CF00;
+    width: 14.2857143%;
+    height: 30px;
+    padding: 10px;
+    background-color: #295f9c; }
+
+  table td {
+    border: 1px solid #CCCCCC;
+    background-color: #5891d3;
+    vertical-align: middle;
+    width: 14.2857143%;
+    height: 40px;
+    font-size: 1.0rem;
+    text-align: center;
+    color: rgba(217, 217, 217, 0.5); }
+
+  table td a {
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    background-color: #4484CE;
+    text-decoration: none;
+    color: #F9CF00;
+    line-height: 40px;
+    padding: 0;
+    margin: 0; }
+
+  table td a:hover {
+    background-color: #2e6bb1; }
+
+  table td.background a {
+    background-color: #c86c10; }
+
+  table td.background a:hover {
+    background-color: #2e6bb1; }
+
+  table a.foreground {
+    color: #FFFFFF; }
+
+  table .prev-left, table .next-right {
+    position: relative;
+    bottom: 0;
+    text-decoration: none;
+    color: #CCCCCC;
+    font-size: 1.0rem;
+    padding: 0 10px; }
+
+  table .prev-left {
+    float: left; }
+
+  table .prev-left:hover {
+    color: #F9CF00; }
+
+  table .next-right {
+    float: right; }
+
+  table .next-right:hover {
+    color: #F9CF00; } }
+/* TABLET STYLING */
+/* PC STYLING */
+@media only screen and (min-width: 1000px) {
+  #header {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 235px;
+    background-color: #fff;
+    padding: 5px;
+    margin: 20px auto; }
+
+  div#logo {
+    float: left;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 210px;
+    text-align: center;
+    padding: 12px 5px;
+    margin: 7px 10px; }
+    div#logo h1 {
+      font-size: 1.4rem;
+      line-height: 1.8; }
+    div#logo p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      font-weight: bold; }
+
+  /* Calendar CSS Styling */
+  div#calendarBox {
+    float: right;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    margin: 0px; }
+
+  table {
+    float: none;
+    width: 100%;
+    position: relative;
+    border-collapse: collapse; }
+
+  table th {
+    border-bottom: 1px solid #CCCCCC; }
+
+  table th.tableHeading {
+    height: 25px;
+    background-color: #4484CE;
+    font-size: 1.0rem;
+    line-height: 25px;
+    color: #F9CF00; }
+
+  table th {
+    vertical-align: bottom;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #F9CF00;
+    width: 14.2857143%;
+    height: 15px;
+    padding: 5px;
+    background-color: #295f9c; }
+
+  table td {
+    border: 1px solid #CCCCCC;
+    background-color: #5891d3;
+    vertical-align: middle;
+    width: 14.2857143%;
+    height: 25px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgba(217, 217, 217, 0.5); }
+
+  table td a {
+    display: inline-block;
+    width: 100%;
+    height: inherit;
+    background-color: #4484CE;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #F9CF00;
+    line-height: 25px;
+    padding: 0;
+    margin: 0; }
+
+  table td a:hover {
+    background-color: #2e6bb1; }
+
+  table td.background a {
+    font-size: 0.8rem;
+    color: #ffa;
+    background-color: #2e2e2e; }
+
+  table td.background a:hover {
+    background-color: #2e6bb1; }
+
+  table a.foreground {
+    color: #FFFFFF; }
+
+  table .prev-left, table .next-right {
+    position: relative;
+    bottom: 0;
+    text-decoration: none;
+    color: #CCCCCC;
+    font-size: 1.0rem;
+    padding: 0 10px; }
+
+  table .prev-left {
+    float: left; }
+
+  table .prev-left:hover {
+    color: #F9CF00; }
+
+  table .next-right {
+    float: right; }
+
+  table .next-right:hover {
+    color: #F9CF00; } }
