@@ -193,115 +193,221 @@ body {
   padding: 0;
   margin: 0; }
 
+img {
+  width: 100%; }
+
+.links {
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #295f9c; }
+  .links:active {
+    color: #295f9c; }
+  .links:hover {
+    color: #006300; }
+
+ul.topnav li.icon {
+  display: none; }
+
+ul.topnav {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #2e2e2e;
+  padding: 0; }
+
+ul.topnav li {
+  float: left; }
+
+ul.topnav li a.top-link {
+  display: none; }
+
+ul.topnav li a {
+  display: inline-block;
+  color: #DCD0C0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.3s;
+  padding: 14px 16px; }
+
+ul.topnav li a:hover {
+  color: #ffe656;
+  background-color: #185bd3; }
+
 /* SMARTPHONE STYLING */
 @media only screen and (max-width: 480px) {
-  table {
+  #header, #logo {
+    display: none; }
+
+  .span6 {
+    width: 100%; }
+
+  ul.topnav {
+    background-color: #2e2e2e; }
+
+  ul.topnav li:not(:first-child) {
+    display: none; }
+
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block; }
+
+  ul.topnav.responsive {
+    position: relative; }
+
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+  ul.topnav.responsive li {
     float: none;
-    width: 100%;
-    position: relative;
-    border-collapse: collapse; }
+    display: inline; }
 
-  table th {
-    border-bottom: 1px solid #CCCCCC; }
+  ul.topnav.responsive li a {
+    display: block;
+    border-bottom: 1px solid #FFFFFF;
+    text-align: left; }
 
-  table th.tableHeading {
+  div.page {
+    background-color: #fff;
+    padding: 15px; }
+    div.page div.main-content {
+      margin-bottom: 10px; }
+      div.page div.main-content h1 {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1.2rem;
+        line-height: 1.8; }
+      div.page div.main-content p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.5; }
+    div.page div.aside-content {
+      margin-bottom: 10px; }
+      div.page div.aside-content h1 {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 1.2rem;
+        line-height: 1.8; }
+      div.page div.aside-content p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        line-height: 1.5; }
+      div.page div.aside-content iframe {
+        width: 100%;
+        max-width: 550px;
+        height: 315px; }
+
+  footer.footer-style {
     height: 50px;
-    background-color: #4484CE;
-    font-size: 1.2rem;
-    line-height: 50px;
-    color: #F9CF00; }
-
-  table th {
-    vertical-align: bottom;
-    font-size: 1.0rem;
-    font-weight: bold;
-    color: #F9CF00;
-    width: 14.2857143%;
-    height: 30px;
-    padding: 10px;
-    background-color: #295f9c; }
-
-  table td {
-    border: 1px solid #CCCCCC;
-    background-color: #5891d3;
-    vertical-align: middle;
-    width: 14.2857143%;
-    height: 40px;
-    font-size: 1.0rem;
     text-align: center;
-    color: rgba(217, 217, 217, 0.5); }
+    background-color: #2e2e2e; }
+    footer.footer-style .footer-name {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 1.2rem;
+      line-height: 50px;
+      color: #fff; } }
+/* TABLET STYLING */
+@media only screen and (min-width: 481px) and (max-width: 999px) {
+  #calendarBox {
+    display: none; }
 
-  table td a {
-    display: inline-block;
+  .span6 {
+    width: 100%; }
+
+  #header {
+    position: relative;
+    display: block;
     width: 100%;
-    height: inherit;
-    background-color: #4484CE;
-    text-decoration: none;
-    color: #F9CF00;
-    line-height: 40px;
+    max-width: 600px;
+    height: 235px;
+    background-color: #fff;
+    padding: 5px;
+    margin: 0 auto; }
+
+  .nav-bar {
+    max-width: 600px; }
+
+  div#logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 200px;
+    text-align: center;
     padding: 0;
     margin: 0; }
 
-  table td a:hover {
-    background-color: #2e6bb1; }
+  .page {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 auto; }
+    .page .main-content {
+      margin-bottom: 10px; }
+      .page .main-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        color: #2e2e2e; }
+      .page .main-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #2e2e2e; }
+    .page .aside-content img {
+      max-width: 600px; }
+    .page .aside-content h1 {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #2e2e2e; }
+    .page .aside-content p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #2e2e2e; }
+    .page .aside-content iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 315px; }
 
-  table td.background a {
-    background-color: #c86c10; }
-
-  table td.background a:hover {
-    background-color: #2e6bb1; }
-
-  table a.foreground {
-    color: #FFFFFF; }
-
-  table .prev-left, table .next-right {
-    position: relative;
-    bottom: 0;
-    text-decoration: none;
-    color: #CCCCCC;
-    font-size: 1.0rem;
-    padding: 0 10px; }
-
-  table .prev-left {
-    float: left; }
-
-  table .prev-left:hover {
-    color: #F9CF00; }
-
-  table .next-right {
-    float: right; }
-
-  table .next-right:hover {
-    color: #F9CF00; } }
-/* TABLET STYLING */
+  footer.footer-style {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    text-align: center;
+    background-color: #2e2e2e;
+    margin: 0 auto; }
+    footer.footer-style .footer-name {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size: 1.2rem;
+      line-height: 50px;
+      color: #fff; } }
 /* PC STYLING */
 @media only screen and (min-width: 1000px) {
   #header {
+    position: relative;
     display: block;
     width: 100%;
     max-width: 1200px;
     height: 235px;
     background-color: #fff;
     padding: 5px;
-    margin: 20px auto; }
+    margin: 0 auto; }
 
   div#logo {
-    float: left;
+    position: absolute;
+    top: 15px;
+    left: 15px;
     display: block;
     width: 100%;
-    max-width: 300px;
-    height: 210px;
+    max-width: 180px;
+    height: 200px;
     text-align: center;
-    padding: 12px 5px;
-    margin: 7px 10px; }
-    div#logo h1 {
-      font-size: 1.4rem;
-      line-height: 1.8; }
-    div#logo p {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 1.6rem;
-      line-height: 1.5;
-      font-weight: bold; }
+    padding: 0;
+    margin: 0; }
 
   /* Calendar CSS Styling */
   div#calendarBox {
@@ -367,7 +473,7 @@ body {
   table td.background a {
     font-size: 0.8rem;
     color: #ffa;
-    background-color: #2e2e2e; }
+    background-color: #295f9c; }
 
   table td.background a:hover {
     background-color: #2e6bb1; }
@@ -393,4 +499,49 @@ body {
     float: right; }
 
   table .next-right:hover {
-    color: #F9CF00; } }
+    color: #F9CF00; }
+
+  .page {
+    background-color: #fff;
+    padding: 10px; }
+    .page .main-content {
+      padding: 20px; }
+      .page .main-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.8;
+        color: #2e2e2e; }
+      .page .main-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #2e2e2e; }
+    .page .aside-content {
+      max-width: 600px;
+      border-left: 5px double rgba(46, 46, 46, 0.6);
+      padding: 10px 10px 10px 20px; }
+      .page .aside-content img {
+        max-width: 600px; }
+      .page .aside-content h1 {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        color: #2e2e2e; }
+      .page .aside-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #2e2e2e; }
+      .page .aside-content iframe {
+        width: 100%;
+        max-width: 550px;
+        height: 315px; }
+
+  footer.footer-style {
+    height: 50px;
+    background-color: #2e2e2e; }
+    footer.footer-style p.footer-name {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 50px;
+      color: #fff; }
+      footer.footer-style p.footer-name span {
+        padding-left: 15px; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
