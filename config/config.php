@@ -9,6 +9,12 @@ if (filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_URL) == "localhost
     error_reporting(0); // -1 = on || 0 = off
 }
 
+define('EMAIL_HOST', 'your_email_host');
+define('EMAIL_USERNAME', 'your_email_username');
+define('EMAIL_PASSWORD', 'your_email_password');
+define('EMAIL_ADDRESS', 'your_email_email');
+define('EMAIL_PORT', 587); // It's usurally port 587 for the localserver:
+
 if (filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_URL) == "localhost") {
   define('DATABASE_HOST', 'localhost'); 
   define('DATABASE_NAME', 'database_name');
