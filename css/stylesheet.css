@@ -182,11 +182,22 @@ table {
 /*******************************************
 TYPOGRAPHY CSS STYLING
 ********************************************/
-h1, h3, th {
+h3, th {
   font-family: 'Merriweather', serif; }
 
+h1 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.8rem;
+  line-height: 1.5; }
+
+h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: bold; }
+
 p, td {
-  font-family: 'Raleway', sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 body {
   background-color: #D9D9D9;
@@ -234,12 +245,184 @@ ul.topnav li a:hover {
   color: #ffe656;
   background-color: #185bd3; }
 
+figure.imageStyle {
+  -moz-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background-color: #95b9e3;
+  padding: 20px;
+  margin: 10px auto; }
+  figure.imageStyle img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding: 10px 0;
+    margin: 0 auto; }
+  figure.imageStyle figcaption {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.0rem;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center; }
+
+ul.product-list {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.0rem;
+  line-height: 1.5;
+  list-style-image: url("../images/img-check-mark.png");
+  padding-left: 40px;
+  padding-bottom: 5px; }
+
+form#contact {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background-color: #484848;
+  padding: 20px;
+  margin: 0 auto 20px; }
+
+form#contact fieldset {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  border: 2px solid lightgray;
+  padding: 30px;
+  margin-bottom: 20px; }
+
+form#contact fieldset legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  color: lightgray;
+  padding: 0 5px; }
+
+form#contact fieldset label {
+  float: left;
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  line-height: 30px;
+  color: lightgray;
+  text-align: left;
+  padding: 0; }
+
+form#contact fieldset input {
+  clear: right;
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  height: 30px;
+  border: none;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #2e2e2e;
+  padding: 0 5px;
+  margin-bottom: 10px; }
+
+form#contact fieldset .radioBlock {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+
+form#contact fieldset input[type=radio] {
+  display: none;
+  margin: 10px; }
+
+form#contact fieldset input[type=radio] + label.radioStyle {
+  display: inline-block;
+  width: 33.33333333333%;
+  height: 45px;
+  margin: -2px;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: lighgray;
+  background-color: #4484CE;
+  border: 2px solid lightgray;
+  line-height: 45px;
+  margin: 10px auto 0 auto; }
+
+form#contact fieldset input[type=radio] + label.radioStyle:hover {
+  color: #ffa;
+  background-color: #2e2e2e; }
+
+form#contact fieldset input[type=radio]:checked + label.radioStyle {
+  background-image: none;
+  color: #ffa;
+  background-color: #2e2e2e; }
+
+form#contact fieldset label.textBox {
+  clear: both;
+  text-align: left;
+  padding: 0;
+  margin-top: 20px; }
+
+form#contact fieldset textArea#comments {
+  resize: none;
+  border: none;
+  outline: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  height: 400px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px; }
+
+form#contact input[type=submit] {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
+  outline: none;
+  border: none;
+  float: right;
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #4484CE;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: capitalize;
+  margin-top: 20px; }
+
+form#contact input[type=submit]:hover {
+  color: #ffa;
+  background-color: #2e2e2e; }
+
 /* SMARTPHONE STYLING */
 @media only screen and (max-width: 480px) {
   #header, #logo {
     display: none; }
 
-  .span6 {
+  .m-span6 {
     width: 100%; }
 
   ul.topnav {
@@ -269,32 +452,50 @@ ul.topnav li a:hover {
     border-bottom: 1px solid #FFFFFF;
     text-align: left; }
 
+  h2 {
+    font-size: 1.2rem;
+    font-weight: normal; }
+
+  figure.imageStyle {
+    max-width: 400px;
+    padding: 15px;
+    margin: 10px auto; }
+    figure.imageStyle img {
+      max-width: 300px; }
+
+  ul.product-list {
+    font-weight: bold;
+    padding-left: 40px; }
+
   div.page {
     background-color: #fff;
-    padding: 15px; }
+    padding: 0 10px; }
     div.page div.main-content {
-      margin-bottom: 10px; }
+      padding: 15px;
+      margin: 10px auto; }
       div.page div.main-content h1 {
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: 1.2rem;
-        line-height: 1.8; }
+        font-size: 1.4rem;
+        line-height: 1.8;
+        font-weight: bold; }
       div.page div.main-content p {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.0rem;
+        font-size: 1.2rem;
         line-height: 1.5; }
     div.page div.aside-content {
-      margin-bottom: 10px; }
+      padding: 15px;
+      margin: 10px auto 10px auto; }
       div.page div.aside-content h1 {
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.8; }
       div.page div.aside-content p {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.0rem;
+        font-size: 1.2rem;
         line-height: 1.5; }
       div.page div.aside-content iframe {
         width: 100%;
-        max-width: 550px;
+        max-width: 400px;
         height: 315px; }
 
   footer.footer-style {
@@ -311,7 +512,7 @@ ul.topnav li a:hover {
   #calendarBox {
     display: none; }
 
-  .span6 {
+  .m-span6 {
     width: 100%; }
 
   #header {
@@ -502,36 +703,34 @@ ul.topnav li a:hover {
     color: #F9CF00; }
 
   .page {
-    background-color: #fff;
-    padding: 10px; }
+    background-color: #95b9e3;
+    padding: 20px; }
     .page .main-content {
-      padding: 20px; }
-      .page .main-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.8;
-        color: #2e2e2e; }
+      -moz-border-radius: 12px;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      background-color: #fff;
+      padding: 30px; }
       .page .main-content p {
         font-size: 1.2rem;
         line-height: 1.5;
         color: #2e2e2e; }
     .page .aside-content {
-      max-width: 600px;
-      border-left: 5px double rgba(46, 46, 46, 0.6);
-      padding: 10px 10px 10px 20px; }
-      .page .aside-content img {
-        max-width: 600px; }
-      .page .aside-content h1 {
-        font-size: 1.4rem;
-        line-height: 1.8;
-        color: #2e2e2e; }
+      -moz-border-radius: 12px;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      background-color: #fff;
+      padding: 30px; }
       .page .aside-content p {
         font-size: 1.2rem;
         line-height: 1.5;
         color: #2e2e2e; }
       .page .aside-content iframe {
+        display: block;
         width: 100%;
-        max-width: 550px;
-        height: 315px; }
+        max-width: 500px;
+        height: 350px;
+        margin: 0 auto 20px; }
 
   footer.footer-style {
     height: 50px;
