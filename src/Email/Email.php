@@ -31,14 +31,14 @@ class Email {
 
         $name = $data['name'];
         $email_from = $data['email'];
-        $subject = $data['reason'];
+        $subject = $data['reason'] . ' email address ' . $data['email'];
         $comments = $data['phone'] . ' ' . $data['website'] . ' ' . $data['comments'];
 
         /*
          * Email Address message is going to
          */
         $message->setTo([
-           'your_email_address' => 'your_name'
+           'jrpepp@pepster.com' => 'John Pepp'// jrpepp@pepster.com || John Pepp
         ]);
 
         $message->setSubject($subject); // Subject:
