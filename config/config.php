@@ -14,6 +14,11 @@ define('EMAIL_USERNAME', 'your_email_username');
 define('EMAIL_PASSWORD', 'your_email_password');
 define('EMAIL_ADDRESS', 'your_email_email');
 define('EMAIL_PORT', 587); // It's usurally port 587 for the localserver:
+/*
+ * You can get your own public / private reCAPTCHA keys plus instructions how to install it here ->
+ * https://www.google.com/recaptcha/intro/invisible.html
+ */
+define('PRIVATE_KEY', 'your_google_private_security_key'); //
 
 if (filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_URL) == "localhost") {
   define('DATABASE_HOST', 'localhost'); 
