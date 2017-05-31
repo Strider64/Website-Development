@@ -77,7 +77,7 @@ if (isset($submit) && $submit === 'submit') {
 
                     <fieldset>
 
-                        <legend>Your Comments</legend>
+                        <legend>Detail Information</legend>
 
                         <div class="radioBlock">
                             <input type="radio" id="radio1" name="reason" value="support" tabindex="5" checked>
