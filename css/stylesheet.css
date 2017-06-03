@@ -282,24 +282,15 @@ ul.product-list {
   padding-bottom: 5px; }
 
 form#contact {
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   height: auto;
   background-color: #484848;
   padding: 20px;
   margin: 0 auto 20px; }
 
 form#contact fieldset {
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
   border: 2px solid lightgray;
   padding: 30px;
   margin-bottom: 20px; }
@@ -384,8 +375,8 @@ form#contact fieldset textArea#comments {
   clear: both;
   display: block;
   width: 100%;
-  max-width: 660px;
-  height: 400px;
+  max-width: 600px;
+  height: 300px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   padding: 10px; }
@@ -394,12 +385,6 @@ form#contact fieldset textArea#comments {
   margin-top: 20px; }
 
 form#contact input[type=submit] {
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
   outline: none;
   border: none;
   float: right;
@@ -420,12 +405,35 @@ form#contact input[type=submit]:hover {
   color: #ffa;
   background-color: #2e2e2e; }
 
+.textBox2 {
+  background-color: #F4F4F4;
+  padding: 15px;
+  margin: 0; }
+  .textBox2 .textWrapLeft {
+    clear: right;
+    float: left;
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    margin: 25px 20px 10px 0; }
+  .textBox2 .cms_title {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: left;
+    font-size: 2.4rem;
+    line-height: 1.8;
+    color: #2e2e2e; }
+  .textBox2 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #2e2e2e; }
+
 /* SMARTPHONE STYLING */
 @media only screen and (max-width: 480px) {
   #header, #logo {
     display: none; }
 
-  .m-span6 {
+  [class^="m-span"] {
     width: 100%; }
 
   ul.topnav {
@@ -501,6 +509,19 @@ form#contact input[type=submit]:hover {
         max-width: 400px;
         height: 315px; }
 
+  form#contact {
+    max-width: 100%;
+    padding: 0;
+    margin: 0; }
+
+  form#contact fieldset {
+    border: none;
+    padding: 30px;
+    margin-bottom: 20px; }
+
+  form#contact fieldset input[type=radio] + label.radioStyle {
+    font-size: 0.8rem; }
+
   footer.footer-style {
     height: 50px;
     text-align: center;
@@ -515,7 +536,7 @@ form#contact input[type=submit]:hover {
   #calendarBox {
     display: none; }
 
-  .m-span6 {
+  [class^="m-span"] {
     width: 100%; }
 
   #header {
@@ -734,6 +755,46 @@ form#contact input[type=submit]:hover {
         max-width: 500px;
         height: 350px;
         margin: 0 auto 20px; }
+
+  .textBox2 {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+    padding: 30px; }
+    .textBox2 img {
+      -moz-border-radius: 180px;
+      -webkit-border-radius: 180px;
+      border-radius: 180px;
+      -moz-box-shadow: 4px 4px 6px transparent;
+      -webkit-box-shadow: 4px 4px 6px transparent;
+      box-shadow: 4px 4px 6px transparent; }
+    .textBox2 .textWrapLeft {
+      width: 100%;
+      max-width: 20%;
+      height: 20%;
+      margin: 10px 20px 0px 5px; }
+
+  form#contact {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+    form#contact fieldset {
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px; }
+    form#contact input[type=submit] {
+      -moz-border-radius: 20px;
+      -webkit-border-radius: 20px;
+      border-radius: 20px;
+      -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4);
+      box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.4); }
 
   footer.footer-style {
     height: 50px;
