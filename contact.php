@@ -35,96 +35,45 @@ if (isset($submit) && $submit === 'submit') {
         $success = "You're not a human!";
     }
 }
+require 'includes/header.inc.php';
 ?>
+<div class="m-span7 form-container">
+    <form id="contact" action="contact.php" method="post"  autocomplete="on">
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>A Slice of Technology</title>
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-    </head>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="index.php"><img src="images/img-rpi-01-small.png" alt="A Slice of Technology"></a>
+        <fieldset>
+
+            <legend><?php echo (isset($message)) ? $message : 'Contact Form'; ?></legend>
+
+            <label for="name" accesskey="U">Name</label>
+            <input name="name" type="text" id="name" tabindex="1" autofocus required="required" />
+
+            <label for="email" accesskey="E">Email</label>
+            <input name="email" type="email" id="email" tabindex="2" required="required" />
+
+            <label for="phone" accesskey="P" tabindex="3">Phone <small>(optional)</small></label>
+            <input name="phone" type="tel" id="phone">
+
+            <label for="website" accesskey="W" tabindex="4">Website <small>(optional)</small></label>
+            <input name="website" type="text" id="website">
+
+            <div class="radioBlock">
+                <input type="radio" id="radio1" name="reason" value="support" tabindex="5" checked>
+                <label class="radioStyle" for="radio1">support</label>
+                <input type="radio" id="radio2" name="reason" value="advertise">
+                <label class="radioStyle" for="radio2">advertise</label>  
+                <input type="radio" id="radio3" name="reason" value="error">
+                <label class="radioStyle" for="radio3">Report a Bug</label>    
             </div>
-            <div id="calendarBox"><?= $myCalendar->generateCalendar(); ?></div>
-        </div>
-        <nav class="container nav-bar">
-            <ul class="topnav" id="myTopnav">
-                <li><a class="top-link" href="#" >&nbsp;</a></li>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="https://www.triviaintoxication.com/">Trivia</a></li>
-                <li><a href="contact.php">Contact</a></li>
-                <li class="icon">
-                    <a id="button" href='#'>&#9776;</a>
-                </li>    
-            </ul>
-        </nav>
-        <div class="container page">
-            <div class="m-span6 form-container">
-                <form id="contact" action="contact.php" method="post"  autocomplete="on">
 
-                    <fieldset>
-
-                        <legend><?php echo (isset($message)) ? $message : 'Contact Details'; ?></legend>
-
-                        <label for="name" accesskey="U">Name</label>
-                        <input name="name" type="text" id="name" tabindex="1" autofocus required="required" />
-
-                        <label for="email" accesskey="E">Email</label>
-                        <input name="email" type="email" id="email" tabindex="2" required="required" />
-
-                        <label for="phone" accesskey="P" tabindex="3">Phone <small>(optional)</small></label>
-                        <input name="phone" type="tel" id="phone">
-
-                        <label for="website" accesskey="W" tabindex="4">Website <small>(optional)</small></label>
-                        <input name="website" type="text" id="website">
-
-                    </fieldset>
-
-                    <fieldset>
-
-                        <legend>Detail Information</legend>
-
-                        <div class="radioBlock">
-                            <input type="radio" id="radio1" name="reason" value="support" tabindex="5" checked>
-                            <label class="radioStyle" for="radio1">support</label>
-                            <input type="radio" id="radio2" name="reason" value="advertise">
-                            <label class="radioStyle" for="radio2">advertise</label>  
-                            <input type="radio" id="radio3" name="reason" value="error">
-                            <label class="radioStyle" for="radio3">Report a Bug</label>    
-                        </div>
-
-                        <label class="textBox" for="comments">Comments</label>
-                        <textarea name="comments" id="comments" spellcheck="true" tabindex="6" required="required"></textarea> 
-                        <div class="g-recaptcha" data-sitekey="6LfPlQoUAAAAAPgD3PpnQ_uGTzc87UALiFgQ3XnK"></div>
-                        <input type="submit" name="submit" value="submit" tabindex="7">
-                    </fieldset>
+            <label class="textBox" for="comments">Comments</label>
+            <textarea name="comments" id="comments" spellcheck="true" tabindex="6" required="required"></textarea> 
+            <div class="g-recaptcha" data-sitekey="6LfPlQoUAAAAAPgD3PpnQ_uGTzc87UALiFgQ3XnK"></div>
+            <input type="submit" name="submit" value="submit" tabindex="7">
+        </fieldset>
 
 
 
-                </form>
-            </div>
-        </div>
-        <footer class="container footer-style">
-            <p class="footer-name">&copy;<?php echo date("Y"); ?> <span>John R. Pepp</span></p>
-        </footer>
-        <script>
-            var button = document.getElementById('button');
-            button.addEventListener("click", function (event) {
-                event.preventDefault();
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            });
-        </script>
-    </body>
-</html>
+    </form>
+</div>
+<?php
+require 'includes/footer.inc.php';
