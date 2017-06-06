@@ -1,4 +1,6 @@
 <?php
+require "vendor/autoload.php";
+
 /* Turn on error reporting */
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -33,3 +35,17 @@ if (filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_SANITIZE_URL) == "localhost
   define('DATABASE_PASSWORD', 'remote_password');
   define('DATABASE_TABLE', 'users');
 }
+
+/* Get the current page */
+$phpSelf = filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_URL);
+$path_parts = pathinfo($phpSelf);
+$basename = $path_parts['basename']; // Use this variable for action='':
+$pageName = ucfirst($path_parts['filename']);
+
+$seconds = 60;
+$minutes = 60;
+$hours = 24;
+$days = 14;
+
+session_set_cookie_params($seconds * $minutes * $hours * $days);
+session_start();
