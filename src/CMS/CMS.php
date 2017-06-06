@@ -13,6 +13,7 @@ class CMS {
     public $cms = \NULL;
     public $result = \NULL;
     public $count = \NULL;
+    public $myURL = \NULL;
 
     public function __construct() {
         
@@ -40,7 +41,8 @@ class CMS {
         $this->query = 'UPDATE cms SET title=:title, comment=:comment, date_created=NOW() WHERE id =:id';
         $this->stmt = $pdo->prepare($this->query);
         $this->result = $this->stmt->execute([':title' => $data['title'], ':comment' => $data['comment'], ':id' => $data['id']]);
-        return $this->result;
+        
+        return $this->myURL = $data['return_page'];
     }
 
     public function read_modify($id) {
