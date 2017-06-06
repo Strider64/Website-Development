@@ -217,33 +217,46 @@ img {
   .links:hover {
     color: #006300; }
 
-ul.topnav li.icon {
-  display: none; }
-
-ul.topnav {
-  list-style-type: none;
-  overflow: hidden;
+.nav-bar {
+  position: relative;
   background-color: #2e2e2e;
-  padding: 0; }
-
-ul.topnav li {
-  float: left; }
-
-ul.topnav li a.top-link {
-  display: none; }
-
-ul.topnav li a {
-  display: inline-block;
-  color: #DCD0C0;
-  text-align: center;
-  text-decoration: none;
-  font-size: 17px;
-  transition: 0.3s;
-  padding: 14px 16px; }
-
-ul.topnav li a:hover {
-  color: #ffe656;
-  background-color: #185bd3; }
+  height: 50px; }
+  .nav-bar ul.topnav li.icon {
+    display: none; }
+  .nav-bar ul.topnav {
+    position: absolute;
+    top: 0;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0; }
+  .nav-bar ul.topnav li {
+    float: left; }
+  .nav-bar ul.topnav li a.top-link {
+    display: none; }
+  .nav-bar ul.topnav li a {
+    display: inline-block;
+    color: #DCD0C0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    padding: 14px 16px; }
+  .nav-bar ul.topnav li a:hover {
+    color: #ffe656;
+    background-color: #185bd3; }
+  .nav-bar .socialMediaStyle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    padding: 10px;
+    margin-top: 0px;
+    margin-right: 20px; }
+    .nav-bar .socialMediaStyle ul.socialIcons li a {
+      float: left;
+      padding-left: 5px; }
 
 figure.imageStyle {
   -moz-box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
@@ -430,35 +443,29 @@ form#contact input[type=submit]:hover {
 
 /* SMARTPHONE STYLING */
 @media only screen and (max-width: 480px) {
-  #header, #logo {
+  #header, #logo, .socialMediaStyle, #login, #logout, .edit {
     display: none; }
 
   [class^="m-span"] {
     width: 100%; }
 
-  ul.topnav {
+  .nav-bar ul.topnav {
     background-color: #2e2e2e; }
-
-  ul.topnav li:not(:first-child) {
+  .nav-bar ul.topnav li:not(:first-child) {
     display: none; }
-
-  ul.topnav li.icon {
+  .nav-bar ul.topnav li.icon {
     float: right;
     display: inline-block; }
-
-  ul.topnav.responsive {
+  .nav-bar ul.topnav.responsive {
     position: relative; }
-
-  ul.topnav.responsive li.icon {
+  .nav-bar ul.topnav.responsive li.icon {
     position: absolute;
     right: 0;
     top: 0; }
-
-  ul.topnav.responsive li {
+  .nav-bar ul.topnav.responsive li {
     float: none;
     display: inline; }
-
-  ul.topnav.responsive li a {
+  .nav-bar ul.topnav.responsive li a {
     display: block;
     border-bottom: 1px solid #FFFFFF;
     text-align: left; }
@@ -466,6 +473,34 @@ form#contact input[type=submit]:hover {
   h2 {
     font-size: 1.2rem;
     font-weight: normal; }
+
+  .textBox2 {
+    background-color: #F4F4F4;
+    padding: 15px;
+    margin: 0; }
+    .textBox2 .textWrapLeft {
+      clear: both;
+      float: left;
+      width: 100%;
+      max-width: 125px;
+      height: 125px;
+      margin: 10px 20px 5px 0; }
+    .textBox2 .cms_title {
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      text-align: left;
+      font-size: 2.4rem;
+      line-height: 1.0;
+      color: #2e2e2e; }
+    .textBox2 span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0rem;
+      margin-bottom: 10px; }
+    .textBox2 p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #2e2e2e; }
 
   figure.imageStyle {
     max-width: 400px;
@@ -511,7 +546,7 @@ form#contact input[type=submit]:hover {
 
   form#contact {
     max-width: 100%;
-    padding: 0;
+    padding: 10px;
     margin: 0; }
 
   form#contact fieldset {
@@ -533,7 +568,7 @@ form#contact input[type=submit]:hover {
       color: #fff; } }
 /* TABLET STYLING */
 @media only screen and (min-width: 481px) and (max-width: 999px) {
-  #calendarBox {
+  #calendarBox, #login, .edit, #logout {
     display: none; }
 
   [class^="m-span"] {
@@ -579,6 +614,33 @@ form#contact input[type=submit]:hover {
         line-height: 1.8;
         color: #2e2e2e; }
       .page .main-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #2e2e2e; }
+    .page .textBox2 {
+      background-color: #F4F4F4;
+      padding: 15px;
+      margin: 0; }
+      .page .textBox2 .textWrapLeft {
+        clear: right;
+        float: left;
+        width: 100%;
+        max-width: 125px;
+        height: 125px;
+        margin: 10px 10px 0px 0; }
+      .page .textBox2 .cms_title {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        text-align: left;
+        font-size: 2.4rem;
+        line-height: 1.0;
+        color: #2e2e2e; }
+      .page .textBox2 span {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.0rem;
+        margin-bottom: 10px; }
+      .page .textBox2 p {
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         line-height: 1.5;
         color: #2e2e2e; }
@@ -633,6 +695,65 @@ form#contact input[type=submit]:hover {
     text-align: center;
     padding: 0;
     margin: 0; }
+
+  #login {
+    position: absolute;
+    top: 10px;
+    left: 305px;
+    display: block;
+    width: 100%;
+    max-width: 525px;
+    height: 50px;
+    background-color: #2e2e2e; }
+    #login label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0rem;
+      line-height: 3.125rem;
+      color: #fff;
+      text-transform: capitalize;
+      padding: 0 5px;
+      margin-left: 10px; }
+    #login input {
+      border: none;
+      outline: none;
+      height: 25px;
+      width: 100%;
+      max-width: 100px;
+      padding: 0 5px;
+      margin-left: 10px; }
+    #login input[type=submit] {
+      outline: none;
+      border: none;
+      width: 100%;
+      max-width: 80px;
+      height: 25px;
+      cursor: pointer;
+      background-color: #4484CE;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.0rem;
+      color: #fff;
+      text-align: center;
+      text-transform: capitalize;
+      margin-top: 12px; }
+      #login input[type=submit]:hover {
+        background-color: green; }
+
+  #logout {
+    position: absolute;
+    top: 200px;
+    left: 440px; }
+    #logout span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: #2e2e2e; }
+    #logout a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: #5891d3;
+      text-decoration: none;
+      text-transform: capitalize; }
+      #logout a:hover {
+        color: green; }
 
   /* Calendar CSS Styling */
   div#calendarBox {
@@ -763,7 +884,15 @@ form#contact input[type=submit]:hover {
     -moz-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.5);
+    position: relative;
     padding: 30px; }
+    .textBox2 .cms_title {
+      line-height: 1.0; }
+    .textBox2 span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.8rem;
+      margin-bottom: 10px; }
     .textBox2 img {
       -moz-border-radius: 180px;
       -webkit-border-radius: 180px;
@@ -776,6 +905,98 @@ form#contact input[type=submit]:hover {
       max-width: 20%;
       height: 20%;
       margin: 10px 20px 0px 5px; }
+    .textBox2 .edit {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: red;
+      text-decoration: none;
+      text-transform: capitalize;
+      cursor: pointer; }
+      .textBox2 .edit:hover {
+        color: green; }
+
+  form#modify {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    background-color: #484848;
+    padding: 20px;
+    margin: 0 auto 20px; }
+    form#modify fieldset {
+      border: 2px solid lightgray;
+      padding: 30px;
+      margin-bottom: 20px; }
+    form#modify legend {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.4rem;
+      color: lightgray;
+      padding: 0 5px; }
+    form#modify label {
+      float: left;
+      display: block;
+      width: 100%;
+      max-width: 180px;
+      height: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 30px;
+      color: lightgray;
+      text-align: left;
+      padding: 0; }
+    form#modify input {
+      clear: right;
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      height: 30px;
+      border: none;
+      outline: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: #2e2e2e;
+      padding: 0 5px;
+      margin-bottom: 10px; }
+    form#modify .textareaLabel {
+      clear: both;
+      text-align: left;
+      padding: 0;
+      margin-top: 20px; }
+    form#modify textarea {
+      resize: none;
+      border: none;
+      outline: none;
+      clear: both;
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      padding: 10px; }
+    form#modify input[type=submit] {
+      outline: none;
+      border: none;
+      float: right;
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      height: 40px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: #4484CE;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      color: #fff;
+      text-transform: capitalize;
+      margin-top: 20px; }
+      form#modify input[type=submit]:hover {
+        color: #ffa;
+        background-color: #2e2e2e; }
 
   form#contact {
     -moz-border-radius: 20px;
