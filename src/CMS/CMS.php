@@ -37,19 +37,33 @@ class CMS {
     public function update(array $data) {
         $db = DB::getInstance();
         $pdo = $db->getConnection();
-        $this->query = 'UPDATE cms SET title=:title, comment=:comment, date_created=NOW() WHERE article =:article';
+        $this->query = 'UPDATE cms SET title=:title, comment=:comment, date_created=NOW() WHERE id =:id';
         $this->stmt = $pdo->prepare($this->query);
-        $this->result = $this->stmt->execute([':title' => $data['title'], ':comment' => $data['comment'], ':article' => $data['article']]);
+        $this->result = $this->stmt->execute([':title' => $data['title'], ':comment' => $data['comment'], ':id' => $data['id']]);
         return $this->result;
     }
 
-    public function read($article) {
+    public function read_modify($id) {
         $db = DB::getInstance();
         $pdo = $db->getConnection();
-        $this->query = 'SELECT id, user_id, article, title, comment, date_created FROM cms WHERE article=:article';
+        $this->query = 'SELECT id, user_id, article, title, comment, DATE_FORMAT(date_created, "%W, %M %e, %Y") as date_created FROM cms WHERE id=:id';
 
         $this->stmt = $pdo->prepare($this->query); // Prepare the query:
-        $this->stmt->execute([':article' => $article]); // Execute the query with the supplied user's parameter(s):
+        $this->stmt->execute([':id' => $id]); // Execute the query with the supplied user's parameter(s):
+
+        $this->stmt->setFetchMode(PDO::FETCH_OBJ);
+        $this->cms = $this->stmt->fetch();
+
+        return $this->cms;
+    }
+
+    public function read($page) {
+        $db = DB::getInstance();
+        $pdo = $db->getConnection();
+        $this->query = 'SELECT id, user_id, article, title, comment, DATE_FORMAT(date_created, "%W, %M %e, %Y") as date_created FROM cms WHERE page=:page';
+
+        $this->stmt = $pdo->prepare($this->query); // Prepare the query:
+        $this->stmt->execute([':page' => $page]); // Execute the query with the supplied user's parameter(s):
 
         $this->stmt->setFetchMode(PDO::FETCH_OBJ);
         $this->cms = $this->stmt->fetch();
