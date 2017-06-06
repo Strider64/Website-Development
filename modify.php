@@ -21,6 +21,8 @@ $myCalendar->phpDate();
 $blog = new CMS();
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_URL);
+$return_page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_URL);
+
 
 $cms = $blog->read_modify($id);
 
@@ -32,11 +34,10 @@ if (isset($submit) && $submit === 'modify') {
     $data['article'] = filter_input(INPUT_POST, 'article', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $data['title'] = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $data['comment'] = filter_input(INPUT_POST, 'comment', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-
-    $result = $blog->update($data);
-
-    if ($result) {
-        header("Location: about.php");
+    $data['return_page'] = filter_input(INPUT_POST, 'return_page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $myURL = $blog->update($data);
+    if ($myURL) {
+        header("Location: " . $myURL);
         exit();
     }
 }
@@ -49,7 +50,7 @@ require_once 'includes/header.inc.php';
             <input type="hidden" name="action" value="modify">
             <input type="hidden" name="id" value="<?= $cms->id; ?>">
             <input type="hidden" name="user_id" value="<?= $cms->user_id; ?>">
-            <input type="hidden" name="article" value="<?= $cms->article; ?>">
+            <input type="hidden" name="return_page" value="<?= $return_page; ?>">
             <label for="title">Title</label>
             <input id="title" name="title" value="<?= $cms->title; ?>" tabindex="1" autofocus>
             <label class="textareaLabel" for="comment">Comment</label>
