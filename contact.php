@@ -1,9 +1,10 @@
 <?php
 require 'config/config.php';
-require "vendor/autoload.php";
+
 
 use Library\Calendar\Calendar;
 use Library\Database\Database as DB;
+use Library\CMS\CMS;
 use Library\Email\Email;
 
 $db = DB::getInstance();
@@ -42,7 +43,7 @@ require 'includes/header.inc.php';
 
         <fieldset>
 
-            <legend><?php echo (isset($message)) ? $message : 'Contact Form'; ?></legend>
+            <legend><?php echo (isset($success)) ? $success : 'Contact Form'; ?></legend>
 
             <label for="name" accesskey="U">Name</label>
             <input name="name" type="text" id="name" tabindex="1" autofocus required="required" />
@@ -57,12 +58,12 @@ require 'includes/header.inc.php';
             <input name="website" type="text" id="website">
 
             <div class="radioBlock">
-                <input type="radio" id="radio1" name="reason" value="support" tabindex="5" checked>
-                <label class="radioStyle" for="radio1">support</label>
-                <input type="radio" id="radio2" name="reason" value="advertise">
-                <label class="radioStyle" for="radio2">advertise</label>  
-                <input type="radio" id="radio3" name="reason" value="error">
-                <label class="radioStyle" for="radio3">Report a Bug</label>    
+                <input type="radio" id="radio1" name="reason" value="message" tabindex="5" checked>
+                <label class="radioStyle" for="radio1">message</label>
+                <input type="radio" id="radio2" name="reason" value="order">
+                <label class="radioStyle" for="radio2">order</label>  
+                <input type="radio" id="radio3" name="reason" value="status">
+                <label class="radioStyle" for="radio3">status inquiry</label>    
             </div>
 
             <label class="textBox" for="comments">Comments</label>

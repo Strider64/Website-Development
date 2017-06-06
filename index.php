@@ -1,9 +1,10 @@
 <?php
 require 'config/config.php';
-require "vendor/autoload.php";
 
 use Library\Calendar\Calendar;
 use Library\Database\Database as DB;
+use Library\CMS\CMS;
+use Library\Email\Email;
 
 $data = []; // Array
 
