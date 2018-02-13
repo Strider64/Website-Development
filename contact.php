@@ -68,7 +68,7 @@ require 'includes/header.inc.php';
 
             <label class="textBox" for="comments">Comments</label>
             <textarea name="comments" id="comments" spellcheck="true" tabindex="6" required="required"></textarea> 
-            <div class="g-recaptcha" data-sitekey="6LfPlQoUAAAAAPgD3PpnQ_uGTzc87UALiFgQ3XnK"></div>
+            <div class="g-recaptcha" data-sitekey="Your_Key"></div>
             <input type="submit" name="submit" value="submit" tabindex="7">
         </fieldset>
 
